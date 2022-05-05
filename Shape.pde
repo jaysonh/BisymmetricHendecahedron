@@ -112,14 +112,26 @@ class Hendecahedron
       faces.add(GJLK );
     }
     
+    void setSize( float _size )
+    {
+      viewScale = _size;
+    }
+    
     void draw()
     {
-        scale(50.0);
+        pushMatrix();
+        scale( viewScale );
+        
         for(Face f : faces)
         {
            f.draw(); 
         }
+        popMatrix();
     }
+    
+    float getSize() { return viewScale; }
+    
+    private float viewScale = 25.0;
     
     PVector A, B, C, D, E, F, G, H, J, K, L;
     Face ABED ;
