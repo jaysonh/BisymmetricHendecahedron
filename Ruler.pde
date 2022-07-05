@@ -24,7 +24,7 @@ class Ruler
         pushMatrix();
           scale(-1,1,1);
           translate(0,0,shapeSize * 2.0);
-          text(shapeSize + "mm", shapeSize * 2.0, shapeSize * 0.0);
+          text( (shapeSize*0.5) + "mm", shapeSize * 2.0, shapeSize * 0.0);
         popMatrix();
         
         
